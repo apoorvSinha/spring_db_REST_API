@@ -1,0 +1,8 @@
+1. Create a database and table
+2. add JPAdependency and Mysql Connector dependencies
+3. Add mysql properties in application.propertes file
+4. create a country bean/Entity class
+5. Create repository interface
+6. Create service class
+7. create controller class
+run the main app
