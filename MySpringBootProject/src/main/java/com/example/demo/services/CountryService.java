@@ -23,7 +23,14 @@ public class CountryService {
 	}
 
 	public Country getCountryID(int id) {
-		return countryrep.findById(id).get();
+		List<Country> countries = countryrep.findAll();
+		Country country = null;
+		for(Country con: countries) {
+			if(con.getId() == id) {
+				country = con;
+			}
+		}
+		return country;
 	}
 	public Country getCountrybyName(String countryName) {
 		List<Country> countries = countryrep.findAll();
@@ -47,12 +54,14 @@ public class CountryService {
 		countryrep.save(country);
 		return country;
 	}
-	public AddResponse deleteCountry(int id) {
-		countryrep.deleteById(id);
+	public void deleteCountry(Country country) {
+		/*countryrep.deleteById(id);
 		AddResponse  res = new AddResponse();
 		res.setMsg("Country deleted");
 		res.setId(id);
-		return res;
+		return res;*/
+		countryrep.delete(country);
+		
 	}
 
 }

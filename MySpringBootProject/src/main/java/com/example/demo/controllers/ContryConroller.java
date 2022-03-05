@@ -84,13 +84,17 @@ public class ContryConroller {
 		
 	}
 	
-	@DeleteMapping("/deletecountry/{id}")
+	/*@DeleteMapping("/deletecountry/{id}")
 	public AddResponse DeleteCountry(@PathVariable(value="id") int id) {
 		return countryservice.deleteCountry(id);
 		
 	}
 	
-	
+	@DeleteMapping("/deletecountry")
+	public AddResponse DeleteCountry(@RequestBody Country country) {
+		return countryservice.deleteCountry(country);
+		
+	}*/
 	
 }
 
